@@ -10,9 +10,9 @@ A multi-node Arduino communication pipeline demonstrating encrypted serial data 
 
 ## Node Architecture
 
-* `M1_Encryptor.ino` — Reads text input from the Serial Monitor, encrypts it via `encryptCaesar` with a shift of 3, and transmits it over `SoftwareSerial` (RX 50, TX 51).
-* `M2_Relay.ino` — Receives encrypted strings from Node 1 via `SoftwareSerial` (pins 50/51) and forwards them to Node 3 via `Serial1`.
-* `M3_Decryptor.ino` — Receives encrypted data from `Serial1`, decrypts it via `decryptCaesar` with a shift of 3, and outputs plaintext to the Serial Monitor.
+* `messenger_uart_m1.ino` — Reads text input from the Serial Monitor, encrypts it via `encryptCaesar` with a shift of 3, and transmits it over `SoftwareSerial` (RX 50, TX 51).
+* `messenger_uart_m2.ino` — Receives encrypted strings from Node 1 via `SoftwareSerial` (pins 50/51) and forwards them to Node 3 via `Serial1`.
+* `messenger_uart_m3.ino` — Receives encrypted data from `Serial1`, decrypts it via `decryptCaesar` with a shift of 3, and outputs plaintext to the Serial Monitor.
 
 ## Hardware Wiring
 
